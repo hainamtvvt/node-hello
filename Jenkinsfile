@@ -17,7 +17,7 @@ pipeline {
         stage ('[NODEJS] Build') {
             steps {
                 echo '************ Build App *************'
-                sh ' sudo ./jenkins/build.sh'
+                sh './jenkins/build.sh'
             }
         }
         stage ('[NODEJS] Push') {
