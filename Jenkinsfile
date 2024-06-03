@@ -14,14 +14,10 @@ pipeline {
     }
 
     stages {
-        stage(name){
-            sh ./runSomething
-        }
-        
         stage ('[NODEJS] Build') {
             steps {
                 echo '************ Build App *************'
-                sh './jenkins/build.sh'
+                sh ' sudo ./jenkins/build.sh'
             }
         }
         stage ('[NODEJS] Push') {
