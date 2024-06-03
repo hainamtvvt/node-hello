@@ -3,7 +3,7 @@ pipeline {
         label ('node1')
     }
 
-    enviroment {
+    environment {
         DOCKER_IMAGE = 'nodejs/app'
         DOCKER_REPO = 'hainamtvvt/node-hello'
         APP_VERSION = "${BUILD_ID}"
