@@ -24,6 +24,7 @@ pipeline {
         stage ('[NODEJS] Push') {
             steps {
                 echo '************ Push image to docker hub *************'
+                sh 'chmod 777 ./jenkins/push.sh'
                 sh './jenkins/push.sh'
             }
         }
