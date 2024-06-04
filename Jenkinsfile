@@ -17,6 +17,7 @@ pipeline {
         stage ('[NODEJS] Build') {
             steps {
                 echo '************ Build App *************'
+                sh 'chmod 777 ./jenkins/build.sh'
                 sh './jenkins/build.sh'
             }
         }
